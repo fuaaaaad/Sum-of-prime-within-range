@@ -17,7 +17,7 @@ do
     while [ $i -lt $start ] 
      do
      if [ `expr $start % $i` -eq 0 ]; then  #Checks if the number is divisible by any number from i=2 to i=start-1
-        flag=0 #If divisible flag is 0 and exits the loop
+        flag=0 #If divisible, flag is set to 0 and exits the loop
         break
     else
      i=`expr $i + 1`
@@ -25,7 +25,7 @@ do
     done
   if [ $flag -eq 1 ] #Checks if the value of flag is 1. 
   then
-  sum=$(($sum+$start)) #If 1: value added to sum value
+  sum=$(($sum+$start)) #If 1, value added to sum value
   echo -e "\t$start\c" #Prints the prime number
   fi
   start=`expr $start + 1`

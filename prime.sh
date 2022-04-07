@@ -18,7 +18,7 @@ do
         fi
     j=$(( $j+1 ))
     done
-    if [[ $flag -eq 1 && $i -ge $low ]]
+    if [[ $flag -eq 1 && $i -gt $low ]]
     then
         echo "$i"
         sum=$(( $sum + $i ))
